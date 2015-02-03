@@ -107,7 +107,7 @@ class plgSearchLupo extends JPlugin
 		$query->from('#__lupo_game AS a');
 		$query->leftJoin('#__lupo_categories AS c ON c.id = a.catid');
 		$query->leftJoin('#__lupo_agecategories AS ac ON ac.id = a.age_catid');
-		$query->where('(a.title LIKE '. $text_like .' OR a.description LIKE '. $text_like .' OR a.keywords LIKE '. $text_like .' OR a.genres LIKE '. $text_like .' OR a.number = '. $db->escape($text, true) .')');
+		$query->where('(a.title LIKE '. $text_like .' OR a.description LIKE '. $text_like .' OR a.keywords LIKE '. $text_like .' OR a.genres LIKE '. $text_like .' OR a.number = '. $db->quote($db->escape($text, true)) .')');
 		$query->order($order);
 		$db->setQuery($query, 0, $limit);
 		
