@@ -53,6 +53,12 @@ class plgSearchLupo extends JPlugin
 	 */
 	function onContentSearch($text, $phrase='', $ordering='', $areas=null)
 	{
+		if (!class_exists( 'LupoModelLupo' )){
+			JLoader::import( 'lupo', JPATH_BASE . '/components/com_lupo/models' );
+		}
+		$model = & new LupoModelLupo();
+
+
 		$db		= JFactory::getDbo();
 		$app	= JFactory::getApplication();
 		$user	= JFactory::getUser();
@@ -103,7 +109,8 @@ class plgSearchLupo extends JPlugin
 						, a.description as text
 						, CONCAT("'.$section.'", " / ", c.title ) AS section
 						, CONCAT(c.title, " / ", ac.title) as cat_agecat
-						, "2" AS browsernav');
+						, "2" AS browsernav
+						, a.number');
 		$query->from('#__lupo_game AS a');
 		$query->leftJoin('#__lupo_categories AS c ON c.id = a.catid');
 		$query->leftJoin('#__lupo_agecategories AS ac ON ac.id = a.age_catid');
@@ -135,6 +142,11 @@ class plgSearchLupo extends JPlugin
                     $rows[$key]->text = $row->cat_agecat;
                 }
 				$rows[$key]->href = 'index.php?option=com_lupo&view=game&id='.$row->id.$itemid;
+
+
+				//check if image exists
+				$image = $model->getGameFoto($row->number, 'thumb_');
+				$rows[$key]->image = $image['image_thumb'];
 			}
 		}
 	

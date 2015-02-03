@@ -3,6 +3,7 @@
 ### 2.0.0 (February 03, 2015)
 
   - genre, keywords and toy-no added to search query
+  - image added to searchresult
   - french language files added (only in github, not in installer)
   
 ### 1.3.1 (October 15, 2014)
