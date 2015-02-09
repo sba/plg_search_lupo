@@ -13,7 +13,7 @@
 	<files>
 		<filename plugin="lupo">lupo.php</filename>
 		<filename>index.html</filename>
-		<filename>changelog.md</filename>
+		<filename>CHANGELOG.md</filename>
 	</files>
 	
 	<languages>
