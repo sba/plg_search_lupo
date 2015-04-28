@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.3.0 (April 28, 2015)
+
+  - description-title added to searchresult text
+
 ### 2.0.0 (February 03, 2015)
 
   - genre, keywords and toy-no added to search query

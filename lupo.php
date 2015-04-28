@@ -106,7 +106,7 @@ class plgSearchLupo extends JPlugin
 						, "" AS created
 						, a.id AS slug
 						, c.id AS catslug
-						, a.description as text
+						, CONCAT (a.description_title, " ", a.description) as text
 						, CONCAT("'.$section.'", " / ", c.title, IF(a.age_catid<>"", CONCAT(", " , ac.title),"")) AS section
 						, CONCAT(c.title, " / ", ac.title) as cat_agecat
 						, "2" AS browsernav
