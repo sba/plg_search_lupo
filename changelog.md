@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.6.0 (November 19, 2015)
+
+  - version sync
+
 ### 2.3.0 (April 28, 2015)
 
   - description-title added to searchresult text
