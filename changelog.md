@@ -1,6 +1,10 @@
 # Changelog
 
-### 2.6.0 (November 19, 2015)
+### 2.7.0 (January 04, 2016)
+
+  - Version sync
+
+  ### 2.6.0 (November 19, 2015)
 
   - version sync
 
