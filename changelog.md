@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.8.0 (February 17, 2016)
+
+  - Version sync
+
 ### 2.7.0 (January 04, 2016)
 
   - Version sync
