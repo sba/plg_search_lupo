@@ -54,11 +54,10 @@ class plgSearchLupo extends JPlugin
 	function onContentSearch($text, $phrase='', $ordering='', $areas=null)
 	{
 		if (!class_exists( 'LupoModelLupo' )){
-			JLoader::import( 'lupo', JPATH_BASE . '/components/com_lupo/models' );
+			JLoader::import( 'lupo', JPATH_SITE . '/components/com_lupo/models' );
 		}
 		$model = & new LupoModelLupo();
-
-
+		
 		$db		= JFactory::getDbo();
 		$app	= JFactory::getApplication();
 		$user	= JFactory::getUser();
