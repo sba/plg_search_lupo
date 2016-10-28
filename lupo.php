@@ -98,8 +98,22 @@ class plgSearchLupo extends JPlugin
 				$order = 'a.title DESC';
 		}
 
-		$text_like	= $db->quote('%' . $db->escape($text, true) . '%', false);
-		$rows = array();
+
+		//search for any words
+		$words = explode(' ', $text);
+		$wheres = array();
+		foreach ($words as $word)
+		{
+			$word      = $db->quote('%' . $db->escape($word, true) . '%', false);
+			$wheres2   = array();
+			$wheres2[] = 'LOWER(a.title) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.description) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.keywords) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.genres) LIKE LOWER(' . $word . ')';
+			$wheres[]  = implode(' OR ', $wheres2);
+		}
+		$where = '(' . implode(($phrase == 'all' ? ') AND (' : ') OR ('), $wheres) . ')';
+
 		$query	= $db->getQuery(true);
 		$query->select('a.id
 						, a.title as title
@@ -114,7 +128,7 @@ class plgSearchLupo extends JPlugin
 		$query->from('#__lupo_game AS a');
 		$query->leftJoin('#__lupo_categories AS c ON c.id = a.catid');
 		$query->leftJoin('#__lupo_agecategories AS ac ON ac.id = a.age_catid');
-		$query->where('(a.title LIKE '. $text_like .' OR a.description LIKE '. $text_like .' OR a.keywords LIKE '. $text_like .' OR a.genres LIKE '. $text_like .' OR a.number = '. $db->quote($db->escape($text, true)) .')');
+		$query->where($where . ' OR a.number = '. $db->quote($db->escape($text, true)));
 		$query->order($order);
 		$db->setQuery($query, 0, $limit);
 		
