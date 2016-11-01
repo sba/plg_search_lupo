@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.2.0 (October 28, 2016)
+### 3.2.0 (November 01, 2016)
   - search for any words
 
 ### 3.1.0 (October 14, 2016)
