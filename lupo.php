@@ -56,7 +56,7 @@ class plgSearchLupo extends JPlugin
 		if (!class_exists( 'LupoModelLupo' )){
 			JLoader::import( 'lupo', JPATH_SITE . '/components/com_lupo/models' );
 		}
-		$model = & new LupoModelLupo();
+		$model = new LupoModelLupo();
 
 		$db		= JFactory::getDbo();
 		$app	= JFactory::getApplication();
