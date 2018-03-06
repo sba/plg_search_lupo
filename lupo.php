@@ -107,6 +107,7 @@ class plgSearchLupo extends JPlugin
 			$word      = $db->quote('%' . $db->escape($word, true) . '%', false);
 			$wheres2   = array();
 			$wheres2[] = 'LOWER(a.title) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'a.number LIKE LOWER(' . $word . ')';
 			$wheres2[] = 'LOWER(a.description) LIKE LOWER(' . $word . ')';
 			$wheres2[] = 'LOWER(a.keywords) LIKE LOWER(' . $word . ')';
 			$wheres2[] = 'LOWER(a.genres) LIKE LOWER(' . $word . ')';
