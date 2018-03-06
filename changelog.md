@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.6.0 (February 21, 2018)
+  - make search result link SEO friendly
+
 ### 3.2.0 (November 01, 2016)
   - search for any words
 

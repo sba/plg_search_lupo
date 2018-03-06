@@ -155,7 +155,7 @@ class plgSearchLupo extends JPlugin
 				if ($request_type == 'json'){
 					$rows[$key]->text = $row->cat_agecat;
 				}
-				$rows[$key]->href = 'index.php?option=com_lupo&view=game&id='.$row->id.$itemid;
+				$rows[$key]->href = 'index.php?option=com_lupo&view=game&id='.$row->number.$itemid;
 
 				$rows[ $key ]->image = false;
 				if($foto_show) {
