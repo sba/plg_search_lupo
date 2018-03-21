@@ -1,8 +1,9 @@
 # Changelog
 
-### 3.6.0 (February 21, 2018)
+### 3.6.0 (March 21, 2018)
   - make search result link SEO friendly
-  - support search by toy-number 
+  - support search by toy-number
+  - load main image
 
 ### 3.2.0 (November 01, 2016)
   - search for any words
