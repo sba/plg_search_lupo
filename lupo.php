@@ -161,7 +161,7 @@ class plgSearchLupo extends JPlugin
 				$rows[ $key ]->image = false;
 				if($foto_show) {
 					//check if image exists
-					$image               = $model->getGameFoto( $row->number, 'thumb_' );
+					$image               = $model->getGameFoto( $row->number, '' );
 					$rows[ $key ]->image = $image['image_thumb'];
 				}
 			}
