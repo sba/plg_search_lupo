@@ -2,7 +2,7 @@
 <extension version="2.5" type="plugin" group="search" method="upgrade">
 	<name>plg_search_lupo</name>
 	<author>Stefan Bauer</author>
-	<creationDate>February 2018</creationDate>
+	<creationDate>April 2018</creationDate>
 	<copyright>Copyright (C) databauer / Stefan Bauer</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>stefan@databauer.ch</authorEmail>
