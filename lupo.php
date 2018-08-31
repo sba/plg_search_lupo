@@ -99,8 +99,8 @@ class plgSearchLupo extends JPlugin
 		}
 
 
-		//search for any words
-		$words = explode(' ', $text);
+		//search for exact search-phrase
+		$words = array($text);
 		$wheres = array();
 		foreach ($words as $word)
 		{
