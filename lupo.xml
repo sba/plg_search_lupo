@@ -2,12 +2,12 @@
 <extension version="2.5" type="plugin" group="search" method="upgrade">
 	<name>plg_search_lupo</name>
 	<author>Stefan Bauer</author>
-	<creationDate>Mai 2018</creationDate>
+	<creationDate>October 2018</creationDate>
 	<copyright>Copyright (C) databauer / Stefan Bauer</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>stefan@databauer.ch</authorEmail>
 	<authorUrl>http://www.ludothekprogramm.ch</authorUrl>
-	<version>3.7.0</version>
+	<version>3.8.0</version>
 	<description>PLG_SEARCH_LUPO_XML_DESCRIPTION</description>
 	
 	<files>
