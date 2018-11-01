@@ -1,5 +1,8 @@
 # Changelog
 
+### 3.9.0 (November 01, 2018)
+  - Version sync
+
 ### 3.8.1 (October 19, 2018)
   - Version sync
 
