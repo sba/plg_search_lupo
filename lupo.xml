@@ -12,7 +12,6 @@
 	
 	<files>
 		<filename plugin="lupo">lupo.php</filename>
-		<filename>CHANGELOG.md</filename>
 	</files>
 	
 	<languages>
