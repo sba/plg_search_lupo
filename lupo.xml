@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>stefan@databauer.ch</authorEmail>
 	<authorUrl>https://www.ludothekprogramm.ch</authorUrl>
-	<version>3.32.0</version>
+	<version>3.33.0</version>
 	<description>PLG_SEARCH_LUPO_XML_DESCRIPTION</description>
 	
 	<files>
