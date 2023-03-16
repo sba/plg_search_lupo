@@ -107,6 +107,9 @@ class plgSearchLupo extends JPlugin {
 			$wheres2[] = 'LOWER(a.description) LIKE LOWER(' . $word . ')';
 			$wheres2[] = 'LOWER(a.keywords) LIKE LOWER(' . $word . ')';
 			$wheres2[] = 'LOWER(a.genres) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.fabricator) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.author) LIKE LOWER(' . $word . ')';
+			$wheres2[] = 'LOWER(a.artist) LIKE LOWER(' . $word . ')';
 			$wheres[]  = implode(' OR ', $wheres2);
 		}
 		$where = '(' . implode(($phrase == 'all' ? ') AND (' : ') OR ('), $wheres) . ')';
